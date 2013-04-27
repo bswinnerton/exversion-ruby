@@ -4,11 +4,10 @@ require 'httparty'
 class Exversion
   include HTTParty
 
-  def initialize(api_key = nil)
+  def initialize(api_key = nil, base_uri = "http://exversion.com/api/v1" )
     @api_key = api_key
+    @base_uri = base_uri
   end
-
-  base_uri "http://exversion.com/api/v1"
 
   def dataset(dataset)
     self.class.get( "/dataset/#{dataset}?key=#{@api_key}" )
