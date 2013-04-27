@@ -20,8 +20,7 @@ class Exversion
   end
 
   def search(query)
-    HTTParty.get("#{@base_uri}/search?q=film")
-    #self.class.get( "/search?q=#{query}" )
+    self.class.get( "#{@base_uri}/search?q=#{query}" )
   end
 end
 
