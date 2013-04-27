@@ -5,7 +5,7 @@ A ruby library for accessing the Exversion API
 
 ```
 git clone git@github.com:bswinnerton/exversion-ruby.git
-gem install 'awesome_print'
+gem install awesome_print httparty
 ```
 
 Examples
