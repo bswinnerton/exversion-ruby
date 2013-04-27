@@ -20,7 +20,7 @@ dataset = exversion.dataset("GLHLPULFKJE5P0Q")
 ```
 require '/path/to/exversion/exversion.rb'
 exversion = Exversion.new("YOUR_API_KEY")
-metadata = e.metadata("GLHLPULFKJE5P0Q")
+metadata = exversion.metadata("GLHLPULFKJE5P0Q")
 ```
 
 **Search**
@@ -28,5 +28,5 @@ metadata = e.metadata("GLHLPULFKJE5P0Q")
 ```
 require '/path/to/exversion/exversion.rb'
 exversion = Exversion.new()
-search_results = e.search("Chunky%20Bacon")
+search_results = exversion.search("Chunky%20Bacon")
 ```
