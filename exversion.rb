@@ -11,7 +11,7 @@ class Exversion
   base_uri "http://exversion.com/api/v1"
 
   def dataset(dataset)
-    self.class.get( "/dataset/#{dataset}?#{@api_key}" )
+    self.class.get( "/dataset/#{dataset}?key=#{@api_key}" )
   end
 
   def metadata(dataset)
