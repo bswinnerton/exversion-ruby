@@ -5,7 +5,11 @@ A ruby library for accessing the Exversion API
 
 ```
 git clone git@github.com:bswinnerton/exversion-ruby.git
+gem install 'awesome_print'
 ```
+
+Examples
+--------
 
 **Datasets**
 
@@ -13,6 +17,7 @@ git clone git@github.com:bswinnerton/exversion-ruby.git
 require '/path/to/exversion/exversion.rb'
 exversion = Exversion.new("YOUR_API_KEY")
 dataset = exversion.dataset("GLHLPULFKJE5P0Q")
+ap dataset
 ```
 
 **Metadata**
@@ -20,7 +25,8 @@ dataset = exversion.dataset("GLHLPULFKJE5P0Q")
 ```
 require '/path/to/exversion/exversion.rb'
 exversion = Exversion.new("YOUR_API_KEY")
-metadata = exversion.metadata("GLHLPULFKJE5P0Q")
+meta = exversion.metadata("GLHLPULFKJE5P0Q")
+ap meta
 ```
 
 **Search**
@@ -29,4 +35,5 @@ metadata = exversion.metadata("GLHLPULFKJE5P0Q")
 require '/path/to/exversion/exversion.rb'
 exversion = Exversion.new()
 search_results = exversion.search("Chunky%20Bacon")
+ap search_results
 ```
