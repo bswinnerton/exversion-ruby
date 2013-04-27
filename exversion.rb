@@ -3,6 +3,8 @@ require 'httparty'
 
 class Exversion
   include HTTParty
+  
+   attr_accessor :api_key, :base_uri
 
   def initialize(api_key = nil, base_uri = "http://exversion.com/api/v1" )
     @api_key = api_key
@@ -18,7 +20,8 @@ class Exversion
   end
 
   def search(query)
-    self.class.get( "/search?q=#{query}" )
+    HTTParty.get("#{@base_uri}/search?q=film")
+    #self.class.get( "/search?q=#{query}" )
   end
 end
 
