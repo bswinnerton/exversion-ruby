@@ -19,7 +19,7 @@ class Exversion
   end
 
   def search(query)
-    self.class.get( "/search/#{query}" )
+    self.class.get( "/search?q=#{query}" )
   end
 end
 
