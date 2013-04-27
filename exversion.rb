@@ -4,7 +4,7 @@ require 'httparty'
 class Exversion
   include HTTParty
 
-  def initialize(api_key)
+  def initialize(api_key = nil)
     @api_key = api_key
   end
 
